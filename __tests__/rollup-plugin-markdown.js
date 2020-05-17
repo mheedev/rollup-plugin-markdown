@@ -48,5 +48,5 @@ it('returns a module for the markdown file', async () => {
 
   expect(requiredModule.html).toMatchSnapshot();
   expect(requiredModule.filename).toEqual('test.md');
-  expect(requiredModule.path).toEqual(path.resolve(path.join(__dirname, 'fixtures/test.md')));
+  expect(requiredModule.path).toEqual(path.resolve(path.join(__dirname, '..', 'fixtures/test.md')));
 });

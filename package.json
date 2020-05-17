@@ -1,6 +1,6 @@
 {
   "name": "@mheedev/rollup-plugin-markdown",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publishConfig": {
     "access": "public"
   },
@@ -13,7 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/mheedev/rollup-plugin-markdown.git"
   },
-
   "keywords": [
     "rollup",
     "static",

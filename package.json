@@ -1,6 +1,9 @@
 {
   "name": "@mheedev/rollup-plugin-markdown",
   "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
   "description": "Complete Markdown parser for modern static websites",
   "main": "index.js",
   "scripts": {
@@ -10,6 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/mheedev/rollup-plugin-markdown.git"
   },
+
   "keywords": [
     "rollup",
     "static",
@@ -19,10 +23,17 @@
   ],
   "author": "@mheedev",
   "license": "MIT",
+  "homepage": "https://github.com/mheedev/rollup-plugin-markdown/tree/master#readme",
   "bugs": {
     "url": "https://github.com/mheedev/rollup-plugin-markdown/issues"
   },
-  "homepage": "https://github.com/mheedev/rollup-plugin-markdown#readme",
+  "files": [
+    "src/"
+  ],
+  "engines": {
+    "node": ">= 8.0.0",
+    "yarn": "use npm!"
+  },
   "devDependencies": {
     "@rollup/pluginutils": "^3.0.10",
     "jest": "^26.0.1",

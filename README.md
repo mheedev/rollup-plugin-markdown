@@ -1,6 +1,6 @@
 # rollup-plugin-markdown
 
-Complete Markdown parser for modern static websites
+Complete Markdown parser specifically built for modern staticly exported websites
 
 ## Dependenices
 
@@ -47,6 +47,14 @@ console.log('My first code block!');
 ```
 
 ````
+
+## Changelog
+
+---
+
+### 0.0.1
+
+- Initial release
 
 ## Credits
 

@@ -33,7 +33,7 @@ export default {
 
 The plugin will parse any `.md` files that you include into your project parse any frontmatter and apply any inline syntax highlighting that you need using the standard code block syntax for Markdown parsers:
 
-```md
+````md
 ---
 title: 'Hello world'
 author: 'dev'
@@ -41,11 +41,11 @@ author: 'dev'
 
 # Hello world
 
-``````js
+```js
 console.log('My first code block!');
-``````
-
 ```
+
+````
 
 ## Credits
 

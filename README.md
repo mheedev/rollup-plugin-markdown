@@ -6,6 +6,7 @@ Complete Markdown parser for modern static websites
 
 This plugin uses the following dependencies:
 | plugin | purpose |
+| ------ | ------- |
 | [front-matter](https://github.com/jxson/front-matter) | Parsing of Markdown file attributes |
 | [markdown-it](https://github.com/markdown-it/markdown-it) | Render Markdown as HTML |
 | [shiki](https://github.com/octref/shiki) | Inline extendable syntax highlighting |

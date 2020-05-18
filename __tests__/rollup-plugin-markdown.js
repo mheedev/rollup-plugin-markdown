@@ -50,3 +50,23 @@ it('returns a module for the markdown file', async () => {
   expect(requiredModule.filename).toEqual('test.md');
   expect(requiredModule.path).toEqual(path.resolve(path.join(__dirname, '..', 'fixtures/test.md')));
 });
+
+it('can apply different themes', async () => {
+  // test that nord is the default theme
+  const originalCode = await bundleFile({
+    input: '../fixtures/test.md',
+    plugins: [markdownPlugin()],
+  });
+
+  // test that Monokai can be applied
+  const modifiedCode = await bundleFile({
+    input: '../fixtures/test.md',
+    plugins: [markdownPlugin({ theme: 'monokai' })]
+  });
+
+  const originalModule = moduleFromString(originalCode);
+  const modifiedModule = moduleFromString(modifiedCode);
+
+  expect(originalModule.html).toContain('background-color: #2e3440');
+  expect(modifiedModule.html).toContain('background-color: #272822');
+});

@@ -1,6 +1,6 @@
 # rollup-plugin-markdown
 
-Complete Markdown parser specifically built for modern staticly exported websites
+Complete Markdown parser specifically built for modern staticly exported websites. It does not require any dependencies to be included in your build, all styles are inlined into the output HTML.
 
 ## Dependenices
 
@@ -32,7 +32,7 @@ export default {
 }
 ```
 
-The plugin will parse any `.md` files that you include into your project parse any frontmatter and apply any inline syntax highlighting that you need using the standard code block syntax for Markdown parsers:
+The plugin will parse any `.md` files that you include into your project, parse any frontmatter and apply any inline syntax highlighting that you need using the standard code block syntax for Markdown parsers:
 
 ````md
 ---
@@ -48,9 +48,27 @@ console.log('My first code block!');
 
 ````
 
-## Changelog
+## Theming
 
----
+You can choose one of the [themes supported by Shiki](https://github.com/octref/shiki/tree/master/packages/themes). The default theme is [nord](https://github.com/arcticicestudio/nord-visual-studio-code).
+
+To set a theme, you can pass it into the theme options like so:
+
+```js
+// rollup.config.js
+
+import markdownPlugin from '@mheedev/rollup-plugin/markdown';
+
+export default {
+  plugins: [
+    markdownPlugin({ theme: 'monokai' }),
+    // ...
+  ],
+  /// ...
+}
+```
+
+## Changelog
 
 ### 0.0.1
 
@@ -58,14 +76,10 @@ console.log('My first code block!');
 
 ## Credits
 
----
-
 - Inspired to include Shiki based on a [post by swyx](https://www.swyx.io/writing/svelte-static/)
 
 - This project was heavily inspired by Jack Franklin's [rollup-plugin-markdown](https://github.com/jackfranklin/rollup-plugin-markdown)
 
 ## License
-
----
 
 MIT &copy; [Ricardo van Hoepen](https://github.com/mheedev)

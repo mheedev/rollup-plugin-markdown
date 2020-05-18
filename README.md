@@ -74,6 +74,10 @@ export default {
 
 - Initial release
 
+### 0.0.4
+
+- Added [theme selection](https://github.com/mheedev/rollup-plugin-markdown/tree/master#Theming) to the plugin options
+
 ## Credits
 
 - Inspired to include Shiki based on a [post by swyx](https://www.swyx.io/writing/svelte-static/)

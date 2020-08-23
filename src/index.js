@@ -4,14 +4,14 @@ const frontmatter = require('front-matter');
 const markdown = require('markdown-it');
 const shiki = require('shiki');
 
-const markdownPlugin = (options = { theme: 'nord' }) => {
+const markdownPlugin = (options = { theme: 'nord', markdown: {} }) => {
   const filter = createFilter(options.include, options.exclude);
 
   return {
     name: 'rollup-plugin-markdown',
     async transform(code, id) {
       const highlighter = await shiki.getHighlighter({
-        theme: options.theme,
+        theme: options.theme || 'nord',
       });
 
       if (!filter(id) === -1) return;
@@ -26,7 +26,8 @@ const markdownPlugin = (options = { theme: 'nord' }) => {
         html: true,
         highlight: (code, lang) => {
           return highlighter.codeToHtml(code, lang);
-        }
+        },
+        ...options.markdown,
       });
 
       const html = md.render(frontmatterOutput.body);

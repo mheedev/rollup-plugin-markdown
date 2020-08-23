@@ -21,7 +21,7 @@ npm i --save-dev @mheedev/rollup-plugin-markdown
 ```js
 // rollup.config.js
 
-import markdownPlugin from '@mheedev/rollup-plugin/markdown';
+import markdownPlugin from '@mheedev/rollup-plugin-markdown';
 
 export default {
   plugins: [
@@ -57,7 +57,7 @@ To set a theme, you can pass it into the theme options like so:
 ```js
 // rollup.config.js
 
-import markdownPlugin from '@mheedev/rollup-plugin/markdown';
+import markdownPlugin from '@mheedev/rollup-plugin-markdown';
 
 export default {
   plugins: [
@@ -69,6 +69,10 @@ export default {
 ```
 
 ## Changelog
+
+### 0.0.5
+
+- Pass additional options to markdown-it
 
 ### 0.0.1
 

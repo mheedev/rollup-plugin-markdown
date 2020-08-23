@@ -12,5 +12,6 @@ exports[`returns a module for the markdown file 1`] = `
 <span style=\\"color: #8FBCBB\\">console</span><span style=\\"color: #ECEFF4\\">.</span><span style=\\"color: #88C0D0\\">log</span><span style=\\"color: #D8DEE9FF\\">(</span><span style=\\"color: #D8DEE9\\">text</span><span style=\\"color: #D8DEE9FF\\">)</span><span style=\\"color: #81A1C1\\">;</span></code></pre>
 <p>This is another paragraph</p>
 <p>And <a href=\\"www.google.com\\">here</a> we have a link</p>
+<p>(c) (C) (r) (R) (tm) (TM) (p) (P) +-</p>
 "
 `;

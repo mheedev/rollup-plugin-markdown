@@ -19,3 +19,5 @@ console.log(text);
 This is another paragraph
 
 And [here](www.google.com) we have a link
+
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-

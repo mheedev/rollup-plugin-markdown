@@ -32,7 +32,7 @@ process.chdir(__dirname);
 const bundleFile = async rollupConfig => {
   const bundle = await rollup.rollup(rollupConfig);
 
-  const { output } = await bundle.generate({ format: 'cjs' });
+  const { output } = await bundle.generate({ exports: 'default', format: 'cjs' });
 
   const [{ code }] = output;
   return code;

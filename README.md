@@ -1,5 +1,7 @@
 # rollup-plugin-markdown
 
+![Node.js CI](https://github.com/mheedev/rollup-plugin-markdown/workflows/Node.js%20CI/badge.svg)
+
 Complete Markdown parser specifically built for modern staticly exported websites. It does not require any dependencies to be included in your build, all styles are inlined into the output HTML.
 
 ## Dependenices

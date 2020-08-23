@@ -68,6 +68,34 @@ export default {
 }
 ```
 
+## Enable features of markdown-it
+
+This package uses markdown-it internally to process your Markdown input.
+
+Therefore it is possible to pass any configuration options to it using the `markdown` key:
+
+```js
+// rollup.config.js
+
+import markdownPlugin from '@mheedev/rollup-plugin-markdown';
+
+export default {
+  plugins: [
+    markdownPlugin({
+      theme: 'monokai',
+      markdown: {
+        typographer: true,
+        // ... pass any additional options to markdown-it here.
+      }
+    }),
+    // ...
+  ],
+  /// ...
+}
+```
+
+To see a full list of options that can be provided to markdown-it, please refer to their [documentation](https://github.com/markdown-it/markdown-it)
+
 ## Changelog
 
 ### 0.0.5

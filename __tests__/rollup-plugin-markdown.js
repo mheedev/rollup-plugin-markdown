@@ -81,6 +81,37 @@ it('can provide markdown-it with additional options', async () => {
 
   const processedHtml = html.replace(/(©|®|™|§|±)/g, (val) => escape(val));
 
+  expect(processedHtml).toContain('background-color: #2e3440');
+
+  expect(processedHtml).toContain('%A9');
+  expect(processedHtml).toContain('%AE');
+  expect(processedHtml).toContain('%u2122');
+  expect(processedHtml).toContain('%A7');
+  expect(processedHtml).toContain('%B1');
+
+  expect(processedHtml).not.toContain('(c)');
+  expect(processedHtml).not.toContain('(C)');
+  expect(processedHtml).not.toContain('(r)');
+  expect(processedHtml).not.toContain('(R)');
+  expect(processedHtml).not.toContain('(tm)');
+  expect(processedHtml).not.toContain('(TM)');
+  expect(processedHtml).not.toContain('(p)');
+  expect(processedHtml).not.toContain('(P)');
+  expect(processedHtml).not.toContain('+-');
+});
+
+it('can provide markdown-it with additional options and apply a theme', async () => {
+  const parsed = await bundleFile({
+    input: '../fixtures/test.md',
+    plugins: [markdownPlugin({ theme: 'monokai', markdown: { typographer: true } })],
+  });
+
+  const { html } = moduleFromString(parsed);
+
+  const processedHtml = html.replace(/(©|®|™|§|±)/g, (val) => escape(val));
+
+  expect(processedHtml).toContain('background-color: #272822');
+
   expect(processedHtml).toContain('%A9');
   expect(processedHtml).toContain('%AE');
   expect(processedHtml).toContain('%u2122');
